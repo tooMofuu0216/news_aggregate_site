@@ -11,6 +11,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@prisma/client": "^5.1.1",
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.32.6",
@@ -18,9 +22,13 @@
     "@trpc/next": "^10.37.1",
     "@trpc/react-query": "^10.37.1",
     "@trpc/server": "^10.37.1",
+    "@waylaidwanderer/chatgpt-api": "^1.37.3",
+    "framer-motion": "^10.16.4",
     "next": "^13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-intersection-observer": "^9.5.2",
     "superjson": "^1.13.1",
     "zod": "^3.21.4"
   },
