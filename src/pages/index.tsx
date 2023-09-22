@@ -8,6 +8,17 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
+type imgListType = Record<string, string>
+
+const imgList:imgListType = {
+  "香港01":"https://upload.wikimedia.org/wikipedia/zh/6/63/HK01logo.jpg",
+  "香港電台":"https://pbs.twimg.com/profile_images/1600452137091141633/MwjYi1ju_400x400.jpg",
+  "頭條日報":"https://static.stheadline.com/stheadline/images/hd_logo.jpg",
+  "RFI - 法國國際廣播電台":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/RFI_logo_2013.svg/150px-RFI_logo_2013.svg.png",
+  "雅虎香港新聞":"https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png"
+}
+Object.freeze(imgList)
+
 export default function Home() {
   const { ref, inView } = useInView();
   const [loadingSummary, setloadingSummary] = useState(false);
@@ -15,6 +26,7 @@ export default function Home() {
   const [sumtext, setsumtext] = useState(``);
   const [article, setarticle] = useState(``);
   const [topic, setTopic] = useState("");
+  
 
   const handleButtonClick = (ev: React.MouseEvent<HTMLButtonElement>) => {
     const btn = ev.currentTarget
@@ -95,11 +107,11 @@ export default function Home() {
                       <Box>
                         <Image
                           // objectFit='cover'
-                          maxW={{ base: '100%', sm: '200px' }}
+                          maxW={{ base: '100%', sm: '150px' }}
                           // maxH={"200px"}
                           // margin={"auto"}
-                          src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                          alt='Caffe Latte'
+                          src={imgList[singleNews.publisher.title]??"https://t3.ftcdn.net/jpg/00/88/43/58/360_F_88435847_HhglbcoGP5qOX3DfudP3hN5z95eTrHqz.jpg"}
+                          alt='news Image'
                         />
                       </Box>
                       <Stack flexGrow={1}>

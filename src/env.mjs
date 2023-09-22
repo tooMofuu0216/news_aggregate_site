@@ -15,7 +15,9 @@ export const env = createEnv({
         "You forgot to change the default URL"
       ),
     BING_TOKEN: z
-      .string() , 
+      .string(),
+    BING_COOKIES: z
+      .string(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -38,6 +40,7 @@ export const env = createEnv({
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
     BING_TOKEN: process.env.BING_TOKEN,
+    BING_COOKIES: process.env.BING_COOKIES,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

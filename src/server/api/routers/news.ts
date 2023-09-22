@@ -105,7 +105,7 @@ export const newsRouter = createTRPCRouter({
         // "_U" cookie from bing.com
         userToken: env.BING_TOKEN,
         // If the above doesn't work, provide all your cookies as a string instead
-        cookies: '',
+        cookies: env.BING_COOKIES,
         // A proxy string like "http://<ip>:<port>"
         proxy: '',
         // (Optional) Set to true to enable `console.debug()` logging
@@ -123,7 +123,7 @@ export const newsRouter = createTRPCRouter({
           // process.stdout.write(token);
         },
       });
-      console.log(JSON.stringify(response, null, 2)); // {"jailbreakConversationId":false,"conversationId":"...","conversationSignature":"...","clientId":"...","invocationId":1,"messageId":"...","conversationExpiryTime":"2023-03-08T03:20:07.324908Z","response":"Here is a short poem about cats that I wrote: ... I hope you like it. 😊","details":{ /* raw response... */ }}
+      // console.log(JSON.stringify(response, null, 2)); // {"jailbreakConversationId":false,"conversationId":"...","conversationSignature":"...","clientId":"...","invocationId":1,"messageId":"...","conversationExpiryTime":"2023-03-08T03:20:07.324908Z","response":"Here is a short poem about cats that I wrote: ... I hope you like it. 😊","details":{ /* raw response... */ }}
 
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return
       return response;
