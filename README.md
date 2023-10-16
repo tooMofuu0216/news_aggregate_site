@@ -1,5 +1,5 @@
 # HK News Site
-A Next.js site listing HK news from the past 7 days, using python script to get news, and store in Mongodb.
+A Next.js site listing HK news from the past 7 days, using python script (can put in cron job for regular scrapping) to get news, and store in Mongodb.
 
 ## APIs from:
 * Get news from [GNews](https://github.com/ranahaani/GNews) 
